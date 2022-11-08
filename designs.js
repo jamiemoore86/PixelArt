@@ -1,6 +1,8 @@
 //Variable setup
 const sizePickerForm = document.getElementById("sizePicker");
 const pixelCanvasTable = document.getElementById("pixelCanvas")
+const inputHeight = document.getElementById("inputHeight");
+const inputWidth = document.getElementById("inputWidth");
 
 let chosenColor = document.getElementById("colorPicker");
 
@@ -14,9 +16,8 @@ function makeGrid(submitButton) {
     //Clear Grid before creating new one
     pixelCanvasTable.innerHTML = "";
 
-    //Get values from form input form
-    const height = document.getElementById("inputHeight").value;
-    const width = document.getElementById("inputWidth").value;
+    let height = inputHeight.value;
+    let width = inputWidth.value;
 
     //Loop based on chosen height
     for(var i = 0; i <= height; i++)
